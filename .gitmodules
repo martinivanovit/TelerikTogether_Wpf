@@ -1,0 +1,6 @@
+[submodule "TelerikTogether"]
+	path = TelerikTogether
+	url = https://github.com/martinivanovit/TelerikTogether.git
+[submodule "WPFSampleApp/TelerikTogether"]
+	path = WPFSampleApp/TelerikTogether
+	url = https://github.com/martinivanovit/TelerikTogether.git
