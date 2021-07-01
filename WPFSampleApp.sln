@@ -5,7 +5,24 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFSampleApp", "WPFSampleApp\WPFSampleApp.csproj", "{452F9B7B-4908-4226-9F75-68C60E5B5C85}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "TelerikTogether.Sunburst", "TelerikTogether\TelerikTogether.Sunburst\TelerikTogether.Sunburst.shproj", "{224A3023-73E9-4ABE-87FD-6C11FE96480A}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "TelerikTogether.RadMath", "TelerikTogether\TelerikTogether.RadMath\TelerikTogether.RadMath.shproj", "{61237590-E3B8-418B-8DFB-D6D20844C67F}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "TelerikTogether.Barcode", "TelerikTogether\TelerikTogether.Barcode\TelerikTogether.Barcode.shproj", "{82297693-A1D3-4C96-9E95-D9FDED17CD69}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "TelerikTogether.Barcode.Tests", "TelerikTogether\TelerikTogether.Barcode.Tests\TelerikTogether.Barcode.Tests.shproj", "{2BC234DF-F8E5-406E-A94B-ED181C92C229}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		TelerikTogether\TelerikTogether.Sunburst\TelerikTogether.Sunburst.projitems*{224a3023-73e9-4abe-87fd-6c11fe96480a}*SharedItemsImports = 13
+		TelerikTogether\TelerikTogether.Barcode.Tests\TelerikTogether.Barcode.Tests.projitems*{2bc234df-f8e5-406e-a94b-ed181c92c229}*SharedItemsImports = 13
+		TelerikTogether\TelerikTogether.Barcode\TelerikTogether.Barcode.projitems*{452f9b7b-4908-4226-9f75-68c60e5b5c85}*SharedItemsImports = 4
+		TelerikTogether\TelerikTogether.RadMath\TelerikTogether.RadMath.projitems*{452f9b7b-4908-4226-9f75-68c60e5b5c85}*SharedItemsImports = 4
+		TelerikTogether\TelerikTogether.Sunburst\TelerikTogether.Sunburst.projitems*{452f9b7b-4908-4226-9f75-68c60e5b5c85}*SharedItemsImports = 4
+		TelerikTogether\TelerikTogether.RadMath\TelerikTogether.RadMath.projitems*{61237590-e3b8-418b-8dfb-d6d20844c67f}*SharedItemsImports = 13
+		TelerikTogether\TelerikTogether.Barcode\TelerikTogether.Barcode.projitems*{82297693-a1d3-4c96-9e95-d9fded17cd69}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU

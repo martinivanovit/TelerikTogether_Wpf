@@ -56,13 +56,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Sunburst.cs" />
-    <Compile Include="TelerikTogether\BarcodeEngine\BarcodeEngine.cs" />
-    <Compile Include="TelerikTogether\Math\RadMath.cs" />
-    <Compile Include="TelerikTogether\SunburstChartEngine\ISunburstItem.cs" />
-    <Compile Include="TelerikTogether\SunburstChartEngine\SunburstItem.cs" />
-    <Compile Include="TelerikTogether\SunburstChartEngine\SunburstItemCollection.cs" />
-    <Compile Include="TelerikTogether\SunburstChartEngine\SunburstItemViewInfo.cs" />
-    <Compile Include="TelerikTogether\SunburstChartEngine\SunburstLayoutEngine.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -106,5 +99,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <Import Project="..\TelerikTogether\TelerikTogether.Barcode\TelerikTogether.Barcode.projitems" Label="Shared" />
+  <Import Project="..\TelerikTogether\TelerikTogether.RadMath\TelerikTogether.RadMath.projitems" Label="Shared" />
+  <Import Project="..\TelerikTogether\TelerikTogether.Sunburst\TelerikTogether.Sunburst.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
