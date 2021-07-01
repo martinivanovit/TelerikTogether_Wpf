@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
-using TelerikTogether;
+using TelerikTogether.Math;
 using TelerikTogether.Sunburst;
 
 namespace WPFSampleApp
 {
-    public class Sunburst : Control
+	public class Sunburst : Control
     {
 		private const string PART_DrawingSurfaceName = "PART_DrawingSurface";
 		private Random random = new Random(0);
