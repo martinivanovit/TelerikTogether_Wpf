@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:WPFSampleApp"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary Source="SunburstStyle.xaml" />
     </Application.Resources>
 </Application>

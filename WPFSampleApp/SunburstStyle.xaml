@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WPFSampleApp">
+    <Style TargetType="local:Sunburst">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:Sunburst">
+                    <Border>
+                        <Canvas x:Name="PART_DrawingSurface" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
