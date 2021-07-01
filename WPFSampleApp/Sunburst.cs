@@ -102,26 +102,26 @@ namespace WPFSampleApp
 		protected Geometry ConstructDonutGraphicsGeometry(SunburstItemViewInfo viewInfo, SunburstContext context)
 		{
 			double innerRadius = (viewInfo.Level * context.LevelSize) + context.MinInnerRadius;
-            Point center = new Point(context.LayoutSlot.X + context.LayoutSlot.Width / 2f, context.LayoutSlot.Y + context.LayoutSlot.Height / 2f);
+            RadPoint center = new RadPoint(context.LayoutSlot.X + context.LayoutSlot.Width / 2f, context.LayoutSlot.Y + context.LayoutSlot.Height / 2f);
 			double outerRadius = innerRadius + context.LevelSize;
 
 			ArcSegment outerArc = new ArcSegment();
 			outerArc.Size = new Size(outerRadius, outerRadius);
 			outerArc.IsLargeArc = Math.Abs(viewInfo.SweepAngle) > 180;
 			outerArc.SweepDirection = SweepDirection.Clockwise;
-			outerArc.Point = RadMath.GetArcPoint(viewInfo.StartAngle + viewInfo.SweepAngle, center, outerRadius);
+			outerArc.Point = RadMath.GetArcPoint(viewInfo.StartAngle + viewInfo.SweepAngle, center, outerRadius).ToPoint();
 
 			LineSegment firstLine = new LineSegment();
-			firstLine.Point = RadMath.GetArcPoint(viewInfo.StartAngle + viewInfo.SweepAngle, center, innerRadius);
+			firstLine.Point = RadMath.GetArcPoint(viewInfo.StartAngle + viewInfo.SweepAngle, center, innerRadius).ToPoint();
 			
 			ArcSegment secondArc = new ArcSegment();
 			secondArc.Size = new Size(innerRadius, innerRadius);
 			secondArc.IsLargeArc = Math.Abs(viewInfo.SweepAngle) > 180;
 			secondArc.SweepDirection = SweepDirection.Counterclockwise;
-			secondArc.Point = RadMath.GetArcPoint(viewInfo.StartAngle, center, innerRadius);
+			secondArc.Point = RadMath.GetArcPoint(viewInfo.StartAngle, center, innerRadius).ToPoint();
 
 
-			Point startPoint = RadMath.GetArcPoint(viewInfo.StartAngle, center, outerRadius);
+			Point startPoint = RadMath.GetArcPoint(viewInfo.StartAngle, center, outerRadius).ToPoint();
 			PathGeometry geometry = new PathGeometry();
 			var figure = new PathFigure();
 			figure.IsClosed = true;
@@ -143,6 +143,19 @@ namespace WPFSampleApp
 			result = new Rect(x, y, Math.Max(diameter, 1f), Math.Max(diameter, 1f));
 
 			return result;
+		}
+	}
+
+	public static class PointExtensions
+    {
+		public static Point ToPoint(this RadPoint point)
+        {
+			return new Point(point.X, point.Y);
+        }
+
+		public static RadPoint ToRadPoint(this Point point)
+		{
+			return new RadPoint(point.X, point.Y);
 		}
 	}
 

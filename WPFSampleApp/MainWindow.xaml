@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="750" Width="800">
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-        <Button Content="Дай Пет" Click="Button_Click" Margin="10" Padding="15"/>
+        <Button Content="Give Me Five" Click="Button_Click" Margin="10" Padding="15"/>
         <Button Content="Render Barcode Image" Click="Button_Click_1" Margin="10" Padding="15"/>
         <Button Content="Show Sunburst" Click="Button_Click_2" Margin="10" Padding="15"/>                       
     </StackPanel>
