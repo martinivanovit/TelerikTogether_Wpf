@@ -54,9 +54,7 @@
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </ApplicationDefinition>
-    <Compile Include="TelerikTogether\TelerikTogether\TelerikTogether\BarcodeEngine.cs" />
-    <Compile Include="TelerikTogether\TelerikTogether\TelerikTogether\RadMath.cs" />
+    </ApplicationDefinition>    
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
